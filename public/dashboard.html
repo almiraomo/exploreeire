@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard | ExploreÉire</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">ExploreÉire</h1>
+
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/activities.html">Explore</a></li>
+        <li><a href="/dashboard.html">Dashboard</a></li>
+        <li><a href="/add-activity.html">Add Activity</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard-page">
+
+    <section class="dashboard-heading">
+      <h2>ExploreÉire Dashboard</h2>
+
+      <p>
+        View statistics and comparisons based on the activities stored
+        in the ExploreÉire database.
+      </p>
+    </section>
+
+    <section class="statistics-container">
+
+      <article class="stat-card">
+        <h3>Total activities</h3>
+        <p id="total-activities">0</p>
+      </article>
+
+      <article class="stat-card">
+        <h3>Free activities</h3>
+        <p id="free-activities">0</p>
+      </article>
+
+      <article class="stat-card">
+        <h3>Average rating</h3>
+        <p id="average-rating">0</p>
+      </article>
+
+      <article class="stat-card">
+        <h3>Counties represented</h3>
+        <p id="county-count">0</p>
+      </article>
+
+      <article class="stat-card">
+        <h3>Highest-rated activity</h3>
+        <p id="highest-rated">-</p>
+      </article>
+
+    </section>
+
+    <section class="chart-container">
+
+      <article class="chart-card">
+        <h3>Activities by category</h3>
+        <canvas id="category-chart"></canvas>
+      </article>
+
+      <article class="chart-card">
+        <h3>Free and paid activities</h3>
+        <canvas id="price-chart"></canvas>
+      </article>
+
+      <article class="chart-card">
+        <h3>Activities by environment</h3>
+        <canvas id="environment-chart"></canvas>
+      </article>
+
+      <article class="chart-card">
+        <h3>Activities by county</h3>
+        <canvas id="county-chart"></canvas>
+      </article>
+
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/dashboard.js"></script>
+
+</body>
+
+</html>

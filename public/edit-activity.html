@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Edit Activity | ExploreÉire</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">ExploreÉire</h1>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="activities.html">Explore</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="add-activity.html">Add Activity</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+
+    <section class="form-section">
+
+      <h2>Edit Activity</h2>
+
+      <p>
+        Update the details below and save the changes.
+      </p>
+
+      <form id="edit-activity-form">
+
+        <label for="edit-name">Activity name</label>
+        <input type="text" id="edit-name" required>
+
+        <label for="edit-county">County</label>
+        <input type="text" id="edit-county" required>
+
+        <label for="edit-city">Town or city</label>
+        <input type="text" id="edit-city" required>
+
+        <label for="edit-category">Category</label>
+        <select id="edit-category" required>
+          <option value="">Choose a category</option>
+          <option value="Museum">Museum</option>
+          <option value="Nature">Nature</option>
+          <option value="Historical">Historical</option>
+          <option value="Cultural">Cultural</option>
+          <option value="Educational">Educational</option>
+          <option value="Entertainment">Entertainment</option>
+        </select>
+
+        <label for="edit-description">Description</label>
+        <textarea id="edit-description" rows="5" required></textarea>
+
+        <label for="edit-price-type">Price type</label>
+        <select id="edit-price-type" required>
+          <option value="">Choose a price type</option>
+          <option value="Free">Free</option>
+          <option value="Paid">Paid</option>
+        </select>
+
+        <label for="edit-price">Price in euro</label>
+        <input type="number" id="edit-price" min="0" step="0.01" required>
+
+        <label for="edit-duration">Duration in minutes</label>
+        <input type="number" id="edit-duration" min="1" required>
+
+        <label for="edit-environment">Environment</label>
+        <select id="edit-environment" required>
+          <option value="">Choose an environment</option>
+          <option value="Indoor">Indoor</option>
+          <option value="Outdoor">Outdoor</option>
+          <option value="Mixed">Mixed</option>
+        </select>
+
+        <label for="edit-rating">Rating</label>
+        <input
+          type="number"
+          id="edit-rating"
+          min="1"
+          max="5"
+          step="0.1"
+          required
+        >
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="edit-student-friendly">
+          Student-friendly
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="edit-accessible">
+          Wheelchair accessible
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="edit-featured">
+          Featured activity
+        </label>
+
+        <button type="submit" class="main-button">
+          Save changes
+        </button>
+
+        <p id="edit-message"></p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <script src="/js/edit-activity.js"></script>
+
+</body>
+
+</html>
